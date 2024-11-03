@@ -79,7 +79,7 @@
 <div class="credits">
     <div class="container">
         <div class="copyright">
-            <a href="{{ .Site.Params.copyrightUrl | default "https://github.com/Lednerb" }}"  class="h-card" rel="me" target="_blank">
+            <div class="h-card">
                 &copy;
                 {{ if .Site.Params.copyrightUseCurrentYear }}
                 {{ now.Year }}
@@ -88,12 +88,12 @@
                 {{ else }}
                 {{ .Site.Params.copyrightYearOverride | default 2018 }}
                 {{ end }}
-                {{ .Site.Params.copyrightBy | default "by Lednerb" }}
-            </a>
-            {{ with  .OutputFormats.Get "rss" -}}
-            -
-            <a href="{{ .Permalink }}">{{ .Name }}</a>
-            {{- end }}
+                <a href="{{ .Site.Params.copyrightUrl | default "https://github.com/Lednerb" }}" class="p-name p-org u-url" target="_blank">{{ .Site.Params.copyrightBy | default "by Lednerb" }}</a>
+                {{ with  .OutputFormats.Get "rss" -}}
+                -
+                <a href="{{ .Permalink }}">{{ .Name }}</a>
+                {{- end }}
+            </div>
         </div>
         <div class="author">
             Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/Lednerb/bilberry-hugo-theme/" target="_blank" rel="noopener">Bilberry Hugo Theme</a>.
