@@ -111,6 +111,10 @@
 
     {{ template "_internal/google_analytics.html" . }}
 
+    {{ if and .Site.Params.goatCounter .Site.Params.goatCounter.code }}
+    {{- partial "analytics/goatcounter" . -}}
+    {{ end }}
+
     {{ if and (isset .Site.Params "enable_mathjax") (eq .Site.Params.enable_mathjax true) }}
         {{ partial "mathjax.html" . }}
     {{ end }}
