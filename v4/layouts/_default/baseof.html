@@ -57,6 +57,7 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
     {{ if or .Params.fediverseCreator .Site.Params.fediverseCreator }}<meta name="fediverse:creator" content="{{ .Params.fediverseCreator | default .Site.Params.fediverseCreator }}" />{{end}}
+    {{ if or .Params.webmentionURL .Site.Params.webmentionURL }}<link rel="webmention" href="{{ .Params.webmentionURL | default .Site.Params.webmentionURL }}" />{{end}}
     {{ hugo.Generator }}
     <title>
         {{ block "title" . }}
