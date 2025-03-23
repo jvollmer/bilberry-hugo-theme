@@ -97,7 +97,8 @@
             </div>
         </div>
         <div class="author">
-            Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/Lednerb/bilberry-hugo-theme/" target="_blank" rel="noopener">Bilberry Hugo Theme</a>.
+            Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}"
+                target="_blank">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
         </div>
     </div>
 </div>
