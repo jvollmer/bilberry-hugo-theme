@@ -8,7 +8,7 @@
     </a>
 
     <div class="container">
-        <div class="logo">
+        <div class="logo u-photo">
             <a href="{{ .Site.BaseURL | relLangURL }}" class="logo">
                 {{ if and (isset .Site.Params "customimage") (ne .Site.Params.customImage "") }}
                     <img src="{{ .Site.Params.customImage | relURL }}" alt="">
