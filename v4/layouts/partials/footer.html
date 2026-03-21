@@ -92,7 +92,7 @@
                 <a href="{{ .Site.Params.copyrightUrl | default "https://github.com/Lednerb" }}" class="p-name p-org u-url" target="_blank">{{ .Site.Params.copyrightBy | default "Lednerb" }}</a>
                 {{ with  .OutputFormats.Get "rss" -}}
                 -
-                <a href="{{ .Permalink }}">{{ .Name }}</a>
+                <a href="{{ .Permalink }}">{{ .Name | upper }}</a>
                 {{- end }}
             </div>
         </div>
